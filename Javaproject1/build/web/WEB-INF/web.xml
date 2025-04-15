@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <!-- Feedback Form Servlet -->
+    <servlet>
+        <servlet-name>Feedbackform</servlet-name>
+        <servlet-class>com.example.Feedbackform</servlet-class>
+    </servlet>
+    <!-- Submit Feedback Servlet -->
+    <servlet>
+        <servlet-name>SubmitFeedbackServlet</servlet-name>
+        <servlet-class>SubmitFeedbackServlet</servlet-class>
+    </servlet>
+    <!-- Servlet Mappings -->
+    <servlet>
+        <servlet-name>LoginUser</servlet-name>
+        <servlet-class>LoginUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutUser</servlet-name>
+        <servlet-class>LogoutUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>com.yourcompany.servlets.AdminLoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.admin.logout.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Feedbackform</servlet-name>
+        <url-pattern>/Feedbackform</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubmitFeedbackServlet</servlet-name>
+        <url-pattern>/SubmitFeedbackServlet</url-pattern>
+    </servlet-mapping>
+    <!-- Database Configuration -->
+    <context-param>
+        <param-name>dbURL</param-name>
+        <param-value>jdbc:mysql://localhost:3306/userdb</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbUser</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbPassword</param-name>
+        <param-value>Nandan@123</param-value>
+    </context-param>
+    <!-- Welcome Page -->
+    <servlet-mapping>
+        <servlet-name>LoginUser</servlet-name>
+        <url-pattern>/LoginUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutUser</servlet-name>
+        <url-pattern>/LogoutUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/AdminLoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

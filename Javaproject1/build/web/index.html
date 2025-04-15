@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #101050;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+            color: aqua;
+        }
+
+        .main {
+            background: #101050;
+            padding: 20px;
+            border: 2px solid aqua;
+            border-radius: 8px;
+            box-shadow: 1px 1px 11px 6px blue;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        #submit, #login {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #login {
+            background-color: #007bff;
+        }
+
+        #submit:hover, #login:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+
+            .main {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .input {
+                padding: 8px;
+            }
+
+            #submit, #login {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h2 {
+                font-size: 20px;
+            }
+
+            .input {
+                padding: 6px;
+            }
+
+            #submit, #login {
+                padding: 6px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>Registration Form</h2>
+        <form action="GetDataServlet" method="get">
+            First Name:<br>
+            <input type="text" class="input" placeholder="Enter your first name..." name="firstName" required><br>
+            Last Name:<br>
+            <input type="text" class="input" placeholder="Enter your last name..." name="lastName" required><br>
+            Mobile:<br>
+            <input type="text" class="input" placeholder="Enter your mobile..." name="mobile" required><br>
+            Email Id:<br>
+            <input type="email" class="input" placeholder="Enter your email..." name="email" required><br>
+            Password:<br>
+            <input type="password" class="input" placeholder="Create your password..." name="password" required><br>
+            Gender:<br>
+            <input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other<br><br>
+            <input type="checkbox" name="condition" required> Accept terms and conditions.<br><br>
+            <input type="submit" id="submit" value="Submit"><br><br>
+            <button onclick="document.location='newjsp.jsp'" id="login">Login</button>
+        </form>
+    </div>
+</body>
+</html>
